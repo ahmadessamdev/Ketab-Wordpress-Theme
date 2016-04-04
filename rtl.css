@@ -1,0 +1,29 @@
+/* Theme: Ketab
+ * Author: Ahmed Essam	
+ * Description: This is a completer RTL css for the theme inclduing
+ *              transforming background images
+ */
+
+#header-right-col {
+    float: left;
+}
+
+#header-left-col{
+    float: right;
+    text-align: right;
+}
+
+#search-form {
+    float: left;
+    margin-left: 34px;
+}
+
+#search-input {
+    float: right;
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+#site-title {
+    font-family: 'Amiri', serif;
+}	

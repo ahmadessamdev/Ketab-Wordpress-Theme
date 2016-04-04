@@ -1,0 +1,283 @@
+/* 
+Theme Name: Ketab
+Theme URI: http://ahmedspace.com/ketab
+Description: Vintage Arabic Style theme
+Author: Ahmed Essam
+Author URI: http://ahmedspace.com
+Version: 1.0
+Tags: dark, green, blue, brown, two-columns, fixed-width, custom-header, sticky-post, microformats, rtl-language-support, editor-style, custom-menu
+License: GPL
+License URI:
+*/
+
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, 
+blockquote:after,
+q:before, 
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* END Reset */
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    color: #333;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
+
+#site-frame {
+    background: #142f00 url('./images/site-frame.png') repeat-y center top;
+}
+
+#site {
+    margin: 0 auto;
+    width: 940px;
+    background-color: #f1e9d6;
+}	
+
+#header {
+    width: 100%;
+    height: 196px;
+    background: #013b2e url('./images/header-bg.jpg') no-repeat center bottom;
+}
+
+#header-right-col {
+    float: right;
+    width: 300px;
+    height: 196px;
+}
+
+#header-left-col{
+    float: left;
+    width: 590px;
+    height: 141px;
+    padding: 55px 0 0 50px;
+    text-align: left;
+}
+
+#site-title {
+    display: block;
+    margin: 0;
+    font-family: 'IM Fell English', serif;
+    font-size: 60px;
+    color:#000;
+}
+
+#tag-line {
+    display:block;
+    margin: 20px 0 0;
+    font-family: 'IM Fell English', serif;
+    font-size: 30px;
+    color:#000;
+}
+
+#search-form {
+    float: right;
+    margin: 140px 30px 0 0;
+    background: transparent url('./images/search-box.png') no-repeat top right;
+    width: 193px;
+    height: 34px;
+}
+
+#search-set {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 193px;
+    height: 34px;
+    background: transparent;
+}
+
+#search-input {
+    float: left;
+    padding-left:10px; 
+    margin: 0; 
+    width: 147px; 
+    height: 34px; 
+    border: none; 
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    font-family: inherit;
+    line-height: normal
+    color: #322208;
+}
+
+#search-input: : -webkit-input-placeholder, #search_input: : -moz-placeholder {
+    color: #644e2b;
+}
+
+#search-btn {
+    float: left;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 36px;
+    height: 32px;
+    background: transparent;
+    cursor: pointer;
+}
+
+#nav {
+    display: block;
+    height: 46px;
+    width: 100%;
+    background: transparent url('./images/nav-bg.png') repeat-x right top; 
+}
+
+#nav ul {
+    margin: 0;
+    font-family:  Arial, Helvetica, sans-serif;
+    padding: 0 30px 0 0;
+    list-style-type: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#nav top-menu-item { display: block; float: right; height: 41px; }
+
+#nav .dropdown {
+    display: block;
+    height: 31px;
+    padding: 10px 20px 0;
+    float: right;
+    color: #d6e9e5; 
+    text-decoration: none; 
+    cursor: pointer;
+}
+
+
+.top-menu-item a:hover, 
+.keep-hover { 
+    background-color: #061f01; 
+}
+
+/* Drop down */
+.sublinks { 
+    display: none;
+}
+
+.sublinks a {
+    display: block;
+    height: 37px;
+    color: #d7d7d7;
+    background-color: #061f01;
+    text-align: right;
+    border-bottom: 1px solid #082701;
+}
+
+.sublinks a: hover { 
+    background-color: #153c0d; 
+    text-decoration: none; 
+    cursor: pointer; 
+}
+
+.sublinks .submenu-item { 
+    display: block; 
+    padding: 7px;
+}
+
+/* END of drop down */
+
+#content-container { 
+    min-height: 1000px; 
+}
+
+#side-pane {
+    float: left;
+    width: 194px;
+    min-height: 1000px;
+    padding: 17px 0;
+    margin-left: 33px;
+}
+
+.sidebar-widget {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+#side-pane .sidebar-widget .widgettitle {
+    margin: 0px;
+    display: block;
+    font-family: inherit;
+    font-size: 18px;
+    color: #f9f7f3;
+    text-align: center;
+    font-weight: normal;
+    background: transparent url('./images/widget-title-bg.png') repeat-x right top;
+    width: 194px;
+    height: 38px;
+    line-height: 40px;
+}
+
+#content {
+    float: right;
+    height: 100%;
+    min-height: 1000px;
+    width: 605px;
+    margin: 17px 33px 17px 0;
+    padding: 20px;
+    background-color: #fefcf7;
+    border: 1px solid #e1d6c4;
+    border-radius: 10px;
+}
+
+#footer {
+    clear: both;
+    min-height: 300px;
+    background: transparent url('./images/footer-bg.png') repeat-x right bottom;
+}
