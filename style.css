@@ -58,12 +58,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 /* END Reset */
 
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+    line-height: normal;
     color: #333;
 }
 
@@ -77,6 +78,13 @@ hr {
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #ffffff;
 }
+
+a {
+    text-decoration:none;
+    font-family: inherit;
+    font-weight: normal;
+    font-size: inherit;
+}	
 
 #site-frame {
     background: #142f00 url('./images/site-frame.png') repeat-y center top;
@@ -97,30 +105,30 @@ hr {
 #header-right-col {
     float: right;
     width: 300px;
-    height: 196px;
+    height: 100%;
 }
 
 #header-left-col{
     float: left;
-    width: 590px;
-    height: 141px;
-    padding: 55px 0 0 50px;
+    width: 640px;
+    height: 100%;
     text-align: left;
 }
 
 #site-title {
     display: block;
-    margin: 0;
-    font-family: 'IM Fell English', serif;
-    font-size: 60px;
+    margin: 63px 0 0 50px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 45px;
     color:#000;
+    
 }
 
 #tag-line {
     display:block;
-    margin: 20px 0 0;
-    font-family: 'IM Fell English', serif;
-    font-size: 30px;
+    margin: 10px 0 0 50px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 25px;
     color:#000;
 }
 
@@ -171,39 +179,43 @@ hr {
     cursor: pointer;
 }
 
-#nav {
+#nav-container {
     display: block;
     height: 46px;
     width: 100%;
-    background: transparent url('./images/nav-bg.png') repeat-x right top; 
+    background: transparent url('./images/nav-bg.png') repeat-x right top;
+    over-flow: hidden;
 }
 
-#nav ul {
-    margin: 0;
-    font-family:  Arial, Helvetica, sans-serif;
-    padding: 0 30px 0 0;
-    list-style-type: none;
-    font-size: 17px;
-    font-weight: bold;
+.nav-list {
+    padding-right: 30px;
 }
 
-#nav top-menu-item { display: block; float: right; height: 41px; }
+.nav-list>li { 
+    display: block; 
+    float: left; 
+    height: 41px; 
+}
 
-#nav .dropdown {
+.nav-list>li>a {
     display: block;
-    height: 31px;
-    padding: 10px 20px 0;
+    font-size: 90%;
+    height: 30px;
+    padding: 11px 20px 0;
     float: right;
     color: #d6e9e5; 
     text-decoration: none; 
     cursor: pointer;
 }
 
-
-.top-menu-item a:hover, 
+.nav-list>li>a:hover, 
 .keep-hover { 
     background-color: #061f01; 
 }
+
+
+
+
 
 /* Drop down */
 .sublinks { 

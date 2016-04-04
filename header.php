@@ -7,7 +7,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php if ( is_rtl() ): ?>
-		<link href='https://fonts.googleapis.com/css?family=Amiri&subset=arabic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
 	<?php else: ?>
 		<link href='https://fonts.googleapis.com/css?family=IM+Fell+English:400italic' rel='stylesheet' type='text/css'>
 	<?php endif; ?>

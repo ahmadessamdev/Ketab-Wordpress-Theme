@@ -1,5 +1,6 @@
 <?php
 
+// Styles
 function theme_name_scripts() {
     wp_enqueue_style( 'main-style', get_stylesheet_uri() );
     wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), false, true );
@@ -7,7 +8,15 @@ function theme_name_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 
-//register_sidebars(2);
+// Register Menu
+function ketab_register_menu() {
+	register_nav_menu('top-menu',__( 'Top Menu' ));
+}
+
+add_action( 'init', 'ketab_register_menu' );
+
+
+//Register Sidbars;
 register_sidebar( array(  
 		       'name'           => 'Left sidebar',  
                'id'             => 'left-sidebar',
