@@ -25,11 +25,8 @@
 			<h3 id="tag-line"><?php bloginfo( 'description' ); ?></h3>
 		</div>
         <div id="header-right-col">
-            <form id="search-form">
-				<fieldset id="search-set">
-					<input name="search-string"  type="text" id="search-input" placeholder="<?php _e( 'Search' ) ?>..." />
-					<button id="search-btn"></button>
-				</fieldset>
-			</form>
+
+            <?php get_search_form(); ?>
+			
         </div>
         </header>
