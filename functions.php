@@ -15,39 +15,34 @@ function ketab_register_menu() {
 
 add_action( 'init', 'ketab_register_menu' );
 
-
 //Register Sidbars;
 register_sidebar( array(  
-		       'name'           => 'Left sidebar',  
-               'id'             => 'left-sidebar',
-		       'before_widget'  => '<div class="sidebar_widget">',  
-		       'after_widget'   => '</div>',  
-		       'before_title'   => '<h4 class="widgettitle">',
-		       'after_title'    => '</h4>'  
-                ));
+	'name'          => 'Sidebar 1',  
+	'id'            => 'sidebar-1',
+	'description'   => 'Main sidebar',		       
+	// 'before_widget'  => '<div class="sidebar_widget">',  
+	// 'after_widget'	  => '</div>',	
+	// 'before_title'	  => '<h4 class="widgettitle">',
+	// 'after_title'	  => '</h4>'  
+));
+
+// Footer
 register_sidebar( array(  
-		       'name'           => 'Footer Left Column',  
-               'id'             => 'footer-left-column',
-		       'before_widget'  => '<div class="footer_left_column">',  
-		       'after_widget'   => '</div>',  
-		       'before_title'   => '<h4 class="widgettitle">',
-		       'after_title'    => '</h4>'  
-                ));
+	'name' => 'Footer Column 1',  
+	'id'   => 'footer-col-1',
+));
 
 register_sidebar( array(  
-		       'name'           => 'Footer Middle Column',  
-               'id'             => 'footer-middle-column',
-		       'before_widget'  => '<div class="footer_middle_column">',  
-		       'after_widget'   => '</div>',  
-		       'before_title'   => '<h4 class="widgettitle">',
-		       'after_title'    => '</h4>'
-                ));
+	'name' => 'Footer Column 2',  
+	'id'   => 'footer-col-2',
+));
+
 register_sidebar( array(  
-		       'name'           => 'Footer Right Column',  
-               'id'             => 'footer-right-column',
-		       'before_widget'  => '<div class="footer_right_column">',  
-		       'after_widget'   => '</div>',  
-		       'before_title'   => '<h4 class="widgettitle">',
-		       'after_title'    => '</h4>'
-                ));
+	'name' => 'Footer Column 3',  
+	'id'   => 'footer-col-3',
+));
+register_sidebar( array(  
+	'name' => 'Footer Column 4',  
+	'id'   => 'footer-col-4',
+));
 ?>

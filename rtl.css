@@ -26,4 +26,13 @@
 
 #site-title {
     font-family: 'Amiri', serif;
-}	
+}
+
+#content {
+    float: right;
+    margin: 17px 33px 17px 0;
+}
+
+#sidebar {
+    float: left;
+}

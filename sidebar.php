@@ -1,7 +1,9 @@
-<aside id="side-pane">
+<aside id="sidebar">
+	<ul id="sidebar-list">
 <?php 
-		 // Make dynamic	
-         dynamic_sidebar("Left sidebar"); 
-		wp_meta();
+    // Make dynamic	
+    dynamic_sidebar("Sidebar 1"); 
+    wp_meta();
 ?>
+	<ul>
 </aside>

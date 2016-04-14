@@ -19,13 +19,15 @@
 	</div>
 </div>
 <div id="content-container">
-    <article id="content">
+	<div id="content">
+		<article>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<h4><?php the_title(); ?></h4>
+		<h4 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
 		<p><?php the_content(__('(more...)')); ?></p>
 		<hr>
 		<?php endwhile;?>
 		<?php endif; ?>
-    </article>
+		</article>
+	</div> <!-- #content -->
 	<?php get_sidebar(); ?>
 	<?php get_footer(); ?>
