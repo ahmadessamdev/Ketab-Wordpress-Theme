@@ -19,26 +19,18 @@
 	</div>
 </div>
 <div id="content-container">
-    <article id="content">
-		<h4><?php printf( __( 'Search Results for: %s', 'ketab' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h4>
-
+	<div id="content">
+		<article>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<h4 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
-		<p><?php the_content(__('(more...)')); ?></p>
+		<p><small><?php the_date(); ?><br><?php the_time(); ?></small></p>
+<p><?php the_content(); ?></p>
+		<br>
+		<p><small><?php the_category() ?></small></p>
 		<hr>
 		<?php endwhile;?>
 		<?php endif; ?>
-
-
-		<?php
-			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'ketab' ),
-				'next_text'          => __( 'Next page', 'ketab' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'ketab' ) . ' </span>',
-			) );
-		?>
-</article>
-
+		</article>
+	</div> <!-- #content -->
 	<?php get_sidebar(); ?>
 	<?php get_footer(); ?>

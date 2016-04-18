@@ -23,7 +23,24 @@
 		<article>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<h4 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
-		<p><?php the_content(__('(more...)')); ?></p>
+		<ul class="post-meta">
+			<li>
+				<span class="dashicons dashicons-admin-users"></span>
+				<a><?php the_date(); ?><?php the_content( __("more...") ); ?></p>
+
+			</li>
+			<li>
+				<span class="dashicons dashicons-format-chat"></span>
+				<a href="<?php comments_link() ?>"><?php comments_number(); ?></a>
+			</li>
+			<li>
+				<span class="dashicons dashicons-portfolio"></span>
+				<?php the_category( ', ' ); ?></p>
+
+			</li>
+		</ul>
+		<br>
+		
 		<hr>
 		<?php endwhile;?>
 		<?php endif; ?>

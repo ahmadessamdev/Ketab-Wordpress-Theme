@@ -1,12 +1,21 @@
 <?php
 
 // Styles
-function theme_name_scripts() {
-    wp_enqueue_style( 'main-style', get_stylesheet_uri() );
-    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), false, true );
+function ketab_scripts() {
+	wp_enqueue_style( 'ketab-style', 
+	                  get_stylesheet_uri(), 
+	                  array( 'dashicons' ), 
+	                  '1.0' 
+	);
+    wp_enqueue_script( 'ketab-js', 
+                       get_template_directory_uri() . '/js/main.js', 
+                       array( 'jquery' ), 
+                       false, 
+                       true
+    );
 }
 
-add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
+add_action( 'wp_enqueue_scripts', 'ketab_scripts' );
 
 // Register Menu
 function ketab_register_menu() {
