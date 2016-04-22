@@ -22,12 +22,31 @@
 	<div id="content">
 		<article>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<h4 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
-		<p><small><?php the_date(); ?><br><?php the_time(); ?></small></p>
-<p><?php the_content(); ?></p>
+		    <h4 class="post-title"><?php the_title(); ?></h4>
+		<?php the_content( __("more...") ); ?>
 		<br>
-		<p><small><?php the_category() ?></small></p>
-		<hr>
+		<ul class="post-meta">
+			<li>
+				<span class="dashicons dashicons-calendar-alt"></span>
+				<a><?php the_date(); ?></p>
+
+			</li>
+			<li>
+				<span class="dashicons dashicons-format-chat"></span>
+				<a href="<?php comments_link() ?>"><?php comments_number(); ?></a>
+			</li>
+			<li>
+				<span class="dashicons dashicons-category"></span>
+				<?php the_category( ', ' ); ?></p>
+
+			</li>
+		</ul>
+		<br>
+		<?php
+		if ( comments_open() || get_comments_number() ) {
+			comments_template();
+		}
+		?>
 		<?php endwhile;?>
 		<?php endif; ?>
 		</article>

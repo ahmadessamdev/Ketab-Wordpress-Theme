@@ -27,17 +27,18 @@
 		<p><?php the_content(__('(more...)')); ?></p>
 		<hr>
 		<?php endwhile;?>
-		<?php endif; ?>
-
-
 		<?php
 			// Previous/next page navigation.
 			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'ketab' ),
-				'next_text'          => __( 'Next page', 'ketab' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'ketab' ) . ' </span>',
+				'prev_text'          => __( 'Previous page', 'twentysixteen' ),
+				'next_text'          => __( 'Next page', 'twentysixteen' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
 			) );
-		?>
+
+		else: ?>
+		<h5>No results</h5>
+	
+		<?php	endif; ?>
 </article>
 
 	<?php get_sidebar(); ?>

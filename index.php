@@ -23,10 +23,12 @@
 		<article>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<h4 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
+		<?php the_content( __("more...") ); ?>
+		<br>
 		<ul class="post-meta">
 			<li>
-				<span class="dashicons dashicons-admin-users"></span>
-				<a><?php the_date(); ?><?php the_content( __("more...") ); ?></p>
+				<span class="dashicons dashicons-calendar-alt"></span>
+				<a><?php the_date(); ?></p>
 
 			</li>
 			<li>
@@ -34,7 +36,7 @@
 				<a href="<?php comments_link() ?>"><?php comments_number(); ?></a>
 			</li>
 			<li>
-				<span class="dashicons dashicons-portfolio"></span>
+				<span class="dashicons dashicons-category"></span>
 				<?php the_category( ', ' ); ?></p>
 
 			</li>
@@ -42,7 +44,16 @@
 		<br>
 		
 		<hr>
-		<?php endwhile;?>
+		<?php endwhile; ?>
+		<?php
+			// Previous/next page navigation.
+			the_posts_pagination( array(
+				'prev_text'          => __( '< Previous' ),
+				'next_text'          => __( 'Next >' ),
+				'before_page_number' => '',
+			) );
+
+		?>
 		<?php endif; ?>
 		</article>
 	</div> <!-- #content -->

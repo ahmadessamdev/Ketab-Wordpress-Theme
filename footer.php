@@ -26,7 +26,7 @@
 		</div>
 	</div>
 	<div id="sign">
-		<a href="#">Ketab Theme</a> designed by <a href="http://ahmedspace.com" target="_blank">Ahmed Essam</a>
+		<a href="#">Ketab Theme</a> by <a href="http://ahmedspace.com" target="_blank">Ahmed Essam</a>
 	</div>
 </footer>
 
