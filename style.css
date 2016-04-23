@@ -1,11 +1,11 @@
 /* 
 Theme Name: Ketab
-Theme URI: http://ahmedspace.com/ketab
+Theme URI: http://ahmedspace.com/ketab-wp-theme
 Description: Vintage Arabic Style theme
 Author: Ahmed Essam
 Author URI: http://ahmedspace.com
 Version: 1.0
-Tags: dark, green, blue, brown, two-columns, fixed-width, custom-header, sticky-post, microformats, rtl-language-support, editor-style, custom-menu
+Tags: dark, green, brown, two-columns, fixed-width, sticky-post, microformats, rtl-language-support, editor-style, custom-menu
 License: GPL
 License URI:
 */
@@ -15,7 +15,7 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+small, strike, strong, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -201,6 +201,9 @@ label {
     font-size: 14px;
 }
 
+cite {
+    font-style: italic;
+}
 
 #site-frame {
     background: #142f00 url('./images/site-frame.png') repeat-y center top;
@@ -509,6 +512,10 @@ label {
     margin: 2px 0 10px 15px;
 }
 
+.aligncenter {
+    text-align: center;
+}
+
 .wp-caption-text {
     text-align: center;
     color: #000;
@@ -522,18 +529,16 @@ label {
     list-style: none;
 }
 
+.sticky-icon {
+    float: right;
+}
 
-.comment ul, .comment ol{
+.comment-list, .children {
     list-style: none;
 }
 
 .comment-list {
-    list-style: none;
     margin: 30px 0;
-}
-
-.comment-author-vcard {
-
 }
 
 .avatar {
@@ -541,10 +546,13 @@ label {
     margin: 0 10px 10px 0;
 }
 
+.comment-meta {
+    height: 22px;
+}
+
 .comment-meta a {
-    color: #555;
+    color: #999;
     font-size: 12px;
-    
 }
 
 .comment {
@@ -571,8 +579,9 @@ label {
 }
 
 .comment-reply-title {
+    clear:both;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0 20px 0;
 }
 
 .comment-notes {
@@ -583,6 +592,14 @@ label {
     font-size: 14px;
 }
 
+.gallery-caption {
+    font-weight: normal;
+    padding: 0 20px;
+}
+.pingback .comment-body {
+    border: none;
+    margin: 0 0 10px 0;
+}
 .screen-reader-text {
     display: none;
 }

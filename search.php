@@ -24,7 +24,7 @@
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<h4 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
-		<p><?php the_content(__('(more...)')); ?></p>
+		<p><?php the_excerpt(); ?></p>
 		<hr>
 		<?php endwhile;?>
 		<?php

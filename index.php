@@ -21,14 +21,19 @@
 <div id="content-container">
 	<div id="content">
 		<article>
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php if ( is_sticky() ) : ?>
+			<span class="dashicons dashicons-sticky sticky-icon"></span>
+		<?php endif; ?>
 		<h4 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
-		<?php the_content( __("more...") ); ?>
+		<div <?php post_class(); ?>>
+			<?php the_content( __("more...") ); ?>
+		</div>
 		<br>
 		<ul class="post-meta">
 			<li>
 				<span class="dashicons dashicons-calendar-alt"></span>
-				<a><?php the_date(); ?></p>
+				<a href="<?php the_permalink(); ?>"><?php the_date(); ?></p>
 
 			</li>
 			<li>
