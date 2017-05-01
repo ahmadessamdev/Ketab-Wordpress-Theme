@@ -1,13 +1,12 @@
 /* 
 Theme Name: Ketab
-Theme URI: http://ahmedspace.com/ketab-wp-theme
-Description: Vintage Arabic Style theme
+Theme URI: http://ketab.ahmedspace.com
+Description: Vintage Classic Style Theme
 Author: Ahmed Essam
 Author URI: http://ahmedspace.com
 Version: 1.0
-Tags: dark, green, brown, two-columns, fixed-width, sticky-post, microformats, rtl-language-support, editor-style, custom-menu
+Tags: dark, green, brown, two-columns, fixed-width, sticky-post, microformats, rtl-language-support, editor-style, custom-menu, responsive
 License: GPL
-License URI:
 */
 
 /* Reset */
@@ -56,6 +55,8 @@ table {
 }
 
 /* END Reset */
+
+/* Typography */
 
 body {
     font-family: Arial, sans-serif;
@@ -186,14 +187,6 @@ input, textarea {
     padding: 5px;
 }
 
-input[type="submit"] {
-    border: 1px solid #ddd;
-    background: #eee;
-    padding: 5px 10px;
-    margin: 20px 0 0 0;
-    cursor: pointer;
-}
-
 label {
     display: block;
     width: 100px;
@@ -205,6 +198,17 @@ cite {
     font-style: italic;
 }
 
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+}
+
+/* End typography */
+
+
 #site-frame {
     background: #142f00 url('./images/site-frame.png') repeat-y center top;
 }
@@ -214,6 +218,8 @@ cite {
     width: 940px;
     background-color: #f1e9d6;
 }	
+
+/* Header */
 
 #header {
     width: 100%;
@@ -242,7 +248,6 @@ cite {
     font-family: georgia, serif;
     font-size: 45px;
     color:#000;
-    
 }
 
 #tag-line {
@@ -253,21 +258,71 @@ cite {
     color:#000;
 }
 
-#search-form {
+/* Social Menu */
+#social-menu-container {
+    margin: 30px 30px 0 0;
     float: right;
-    margin: 140px 30px 0 0;
+    height: 30px;
+    width: 100%;
+}
+
+ul.social-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float:right;
+}
+
+.social-menu li {
+    float: left;
+    margin-left: 5px;
+}
+
+.social-menu a {
+    font-family:dashicons;
+    font-size: 24px;
+    color: #222;
+}
+
+.social-menu a:hover {
+    color: #000;
+}
+
+/* Default icon */
+.social-menu a:before {
+    content: "\f240";
+}
+
+.social-menu a[href*="facebook.com"]:before {
+    content: "\f304";
+}
+
+.social-menu a[href*="twitter.com"]:before {
+    content: "\f301";
+}
+
+.social-menu a[href*="plus.google.com"]:before {
+    content: "\f462";
+}
+
+/* End of social menu */
+
+/* Header search form */
+#header-search {
+    float: right;
+    width: 100%;
+    margin: 80px 30px 0 0;
     background: transparent url('./images/search-box.png') no-repeat top right;
     width: 193px;
     height: 34px;
 }
 
-#search-form div {
+#header-search div {
     width: 100%;
     height: 100%;
 }
 
-
-#search-form input[type="text"] {
+#header-search input[type="text"] {
     float: left;
     padding:0 0 0 10px; 
     width: 147px; 
@@ -281,12 +336,19 @@ cite {
     color: #322208;
 }
 
-#search-form input[type="text"]:: -webkit-input-placeholder, 
-#searchform input[type="text"]:: -moz-placeholder {
+#header-search input[type="text"]::-webkit-input-placeholder {
     color: #644e2b;
 }
 
-#search-form input[type="submit"] {
+#header-search input[type="text"]::-moz-placeholder {
+    color: #644e2b;
+}
+
+#header-search input[type="text"]::placeholder {
+    color: #644e2b;
+}
+
+#header-search input[type="submit"] {
     float: left;
     border: none;
     width: 36px;
@@ -294,6 +356,10 @@ cite {
     background: transparent;
     cursor: pointer;
 }
+
+/* End of header */
+
+/* Navigation top bar */
 
 #nav-container {
     display: block;
@@ -303,21 +369,22 @@ cite {
     /* over-flow: hidden; */
 }
 
-#nav-container ul {
+#top-menu, #top-menu .sub-menu {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.menu-item { 
+
+#top-menu .menu-item { 
     display: block; 
     height: 41px; 
 }
 
-.nav-list>.menu-item {
+#top-menu>.menu-item {
     float: left;
 }
 
-.menu-item a {
+#top-menu .menu-item a {
     display: block;
     font-size: 90%;
     height: 30px;
@@ -327,34 +394,38 @@ cite {
     cursor: pointer;
 }
 
-.menu-item>a:hover, 
-.keep-hover { 
+#top-menu .menu-item>a:hover, 
+#top-menu .keep-hover { 
     background-color: #061f01; 
 }
 
 /* Drop down */
-.sub-menu { 
+#top-menu .sub-menu { 
     display: none;
 }
 
-.sub-menu a {
+#top-menu .sub-menu a {
     color: #d7d7d7;
     background-color: #061f01;
     border-bottom: 1px solid #082701;
 }
 
-.sub-menu a:hover { 
+#top-menu .sub-menu a:hover { 
     background-color: #153c0d; 
     text-decoration: none; 
     cursor: pointer; 
 }
 
-.sub-menu-item { 
+#top-menu .sub-menu-item { 
     display: block;
     padding: 7px;
 }
 
-/* END of drop down */
+#menu-icon {
+    display: none;
+}
+/* End of drop down */
+/* End of navigation */
 
 #content-container { 
     min-height: 1000px; 
@@ -402,10 +473,12 @@ cite {
     color: #666;
 }
 
+/* Sidebar */
+
 #sidebar {
     float: right;
     width: 198px;
-    padding: 20px 5px;
+    padding: 0 5px 20px 5px;
     /* border: 1px solid #e1d6c4; */
     /* background-color: #fefcf7; */
     min-height: 1000px;
@@ -436,8 +509,22 @@ cite {
     margin: 0;
     padding-bottom: 7px;
     font-family: inherit;
-    font-size: 22px;
+    font-size: 18px;
 }
+
+#sidebar a {
+    color: #666;
+}
+
+#sidebar input {
+    display: block;
+    width: 100%;
+}
+
+#sidebar .widget ul {
+    margin-left: 20px;
+}
+/* End of sidebar */
 
 #footer {
     clear: both;
@@ -620,3 +707,113 @@ cite {
 .prev {
     margin: 0 10px 0 0;
 }
+
+/* Media queries */
+
+/* Desktops */
+/* @media only screen and (min-width: 768px) { */
+/* Tablets */
+@media only screen and (max-width: 950px) {
+    #site {
+	width: 100%;
+    }
+
+    #content {
+	width: 65%;
+	margin: 20px 0 10px 20px;
+    }
+
+    #header {
+	height: 100px;
+    }
+
+    #header-right-col {
+	width: 30%;
+    }
+
+    #header-left-col{
+	width: 60%;
+	text-align: left;
+	padding-left: 20px;
+    }
+    
+    #site-title {
+	margin-top: 14px;
+	font-size: 35px;
+    }
+
+    #tag-line {
+	margin-top: 7px;
+	font-size: 20px;
+    }
+
+    #social-menu-container {
+	margin: 10px 20px 0 0;
+    }
+    
+    #header-search {
+	margin: 16px 20px 0 0;
+    }
+
+    #nav-container {
+	height: 40px;
+    }
+    #top-menu .menu-item a {
+	font-size: 83%;
+    }
+    
+    #sidebar {
+	width: 24%;
+	margin: 20px 10px 10px 10px;
+    }
+
+    h4 {
+	font-size: 20px;
+    }
+
+    .post-meta li {
+	min-width: 125px;
+    }
+    
+    .post-meta a {
+	font-size: 12px;
+    }
+
+    #top-menu>.menu-item {
+	height: 40px;
+    }
+    
+    #top-menu>.menu-item:not(:first-child) {
+	float: none;
+	display: none;
+    }
+
+    #sidebar input {
+	width: 94%;
+    }
+    
+    .sticky-icon {
+        font-size: 100%;
+    }
+
+    #menu-icon {
+	display: block;
+	float: right;
+	padding: 10px 15px;
+	margin: 0 20px;
+	color: #ddd;
+    }
+
+    #menu-icon:hover {
+	background-color: #061f01;
+    }
+
+}
+
+
+/* Phones */
+@media only screen and (min-width: 320px) {
+    
+}
+
+

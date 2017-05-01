@@ -18,11 +18,14 @@ function ketab_scripts() {
 add_action( 'wp_enqueue_scripts', 'ketab_scripts' );
 
 // Register Menu
-function ketab_register_menu() {
+function ketab_register_menus() {
+	// Top Menu
 	register_nav_menu('top-menu',__( 'Top Menu' ));
+	// Social Menu
+	register_nav_menu('social-menu',__( 'Social Menu' ));
 }
 
-add_action( 'init', 'ketab_register_menu' );
+add_action( 'init', 'ketab_register_menus' );
 
 //Register Sidbars;
 register_sidebar( array(  
