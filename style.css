@@ -416,7 +416,7 @@ ul.social-menu {
     cursor: pointer; 
 }
 
-#top-menu .sub-menu-item { 
+#top-menu .item-text { 
     display: block;
     padding: 7px;
 }
@@ -720,7 +720,8 @@ ul.social-menu {
 
     #content {
 	width: 65%;
-	margin: 20px 0 10px 20px;
+	margin: 2% 0 1% 2%;
+	padding: 2%;
     }
 
     #header {
@@ -728,13 +729,14 @@ ul.social-menu {
     }
 
     #header-right-col {
-	width: 30%;
+	width: 36%;
+	padding-right: 2%;
     }
 
     #header-left-col{
 	width: 60%;
 	text-align: left;
-	padding-left: 20px;
+	padding-left: 2%;
     }
     
     #site-title {
@@ -748,11 +750,11 @@ ul.social-menu {
     }
 
     #social-menu-container {
-	margin: 10px 20px 0 0;
+	margin: 10px 0;
     }
     
     #header-search {
-	margin: 16px 20px 0 0;
+	margin: 6px 0;
     }
 
     #nav-container {
@@ -764,11 +766,16 @@ ul.social-menu {
     
     #sidebar {
 	width: 24%;
-	margin: 20px 10px 10px 10px;
+	margin: 2% 2% 1% 2%;
+	padding: 0;
     }
 
     h4 {
 	font-size: 20px;
+    }
+
+    #nav-container {
+	position: relative;
     }
 
     .post-meta li {
@@ -778,7 +785,7 @@ ul.social-menu {
     .post-meta a {
 	font-size: 12px;
     }
-
+    
     #top-menu>.menu-item {
 	height: 40px;
     }
@@ -788,6 +795,37 @@ ul.social-menu {
 	display: none;
     }
 
+    #top-menu> .menu-item a:hover {
+	background: #01352a;
+    }
+    
+    #top-menu.responsive {
+	position: relative;
+    }
+    
+    #top-menu.responsive .menu-item {
+	float: none;
+	display:block;
+	background: #004a39;
+	height: auto;
+    }
+
+    #top-menu.responsive .sub-menu {
+	display:block;
+	position: relative;
+	
+    }
+
+    #top-menu.responsive .sub-menu a {
+	background: none;
+	border: none;
+	padding-left: 35px;
+    }
+
+    #top-menu.responsive .menu-item a:hover {
+	background: #01352a;
+    }
+    
     #sidebar input {
 	width: 94%;
     }
@@ -800,20 +838,51 @@ ul.social-menu {
 	display: block;
 	float: right;
 	padding: 10px 15px;
-	margin: 0 20px;
+	margin: 0 2%;
 	color: #ddd;
     }
 
     #menu-icon:hover {
-	background-color: #061f01;
+	background: #01352a;
     }
 
+    #menu-icon.abs {
+	position: absolute;
+	top: 0;
+	right: 0;
+    }
 }
 
 
-/* Phones */
-@media only screen and (min-width: 320px) {
-    
+
+@media only screen and (max-width: 600px) {
+    #content {
+	display: block;
+	float: none;
+	width: 92%;
+	margin: 2%
+    }
+
+    #sidebar {
+	float: none;
+	display: block;
+	margin: 2%;
+	width: 92%;
+	padding: 2%;
+    }
+
+    #sidebar input {
+	width: 100%;
+    }
+
+    #site-title {
+	font-size: 24px;
+	margin-top: 20px;
+    }
+
+    #tag-line {
+	font-size: 18px;
+    }
 }
 
 

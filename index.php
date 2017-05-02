@@ -7,7 +7,7 @@
 	'menu_id'	 => 'top-menu',
 	'container'	 => 'nav',
 	'theme_location' => 'top-menu',
-	'link_before'	 => '<span class="sub-menu-item">',
+	'link_before'	 => '<span class="item-text">',
 	'link_after'	 => '</span>',
 	'depth'          => 2,
 	'fallback_cb'    => false,

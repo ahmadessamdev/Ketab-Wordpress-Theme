@@ -6,7 +6,6 @@
 var isSlide = false;
 var breakPoint = 950;
 
-
 /* MENU CODE */
 jQuery( document ).ready( function( $ ) {
     // If desktop, create animated window
@@ -17,58 +16,68 @@ jQuery( document ).ready( function( $ ) {
 
     $( window ).on('resize', function() {
 	// Remove animated window if width is reduced
-	if ( $( this ).width() <= breakPoint && isSlide == true) {
-	    // Remove handlers
+	if ( $( this ).width() <= breakPoint && isSlide === true) {
+	    // Remove handlers and styles
+	    $( '#top-menu' ).off();
 	    $( '#top-menu' ).children().off();
-	    $( '#top-menu .nav-list' ).off();
+	    $( '#top-menu .sub-menu' ).removeAttr( "style" ).off();
+	    $( '#top-menu .menu-item').removeAttr( "style" );
 	    isSlide = false;
-	} else if ($( this ).width() > breakPoint && isSlide == false) {
+	} else if ($( this ).width() > breakPoint && isSlide === false) {
 	    // Recreate animated menu
 	    createMenuSlide();
 	    isSlide = true;
 	}
     });
 
+    // Menu icon for responsive view
+    $( "#menu-icon" ).click( function() {
+	$( '#top-menu' ).toggleClass( "responsive" );
+	$( this ).toggleClass( "abs");
+    });
+    
     // Create sliding menu
     function createMenuSlide() {
 	$( '#top-menu' ).children().mouseenter(function() {
-    	    // Reset: stop any events in the other top menu items
-    	    $( '#top-menu .sub-menu' ).stop( false, true ).hide();
-    	    $( '#top-menu' ).children().removeClass( "keep-hover" );
-    	    $( this ).addClass( "keep-hover" );
-    	    // Select the sub menu items under this top menu item 
-    	    // (global as we will need it)
-    	    ketabSubmenu = $( this ).children(":nth-child(2)");
+	    var mouseOnItem = true;
+	    var mouseOnSub  = false;
+	    var item = $( this );
+    	    item.addClass( "keep-hover" );
+    	    var curSubMenu = item.children(":nth-child(2)");
     	    // Minimum width of links of the submenu = width the top menu item
-    	    ketabSubmenu.children().css({ 
-    		"min-width" : $(this).innerWidth() + 'px'
+    	    curSubMenu.children().css({ 
+    		"min-width" : item.innerWidth() + 'px'
     	    });
     	    // Get the auto width of the submenu
-    	    var links_auto_width = ketabSubmenu.innerWidth();
-    	    ketabSubmenu.css({
+    	    var autoWidth = curSubMenu.innerWidth();
+    	    curSubMenu.css({
     		position : 'absolute',
-    		top      : $( this ).offset().top + 
-    		    $( this ).outerHeight() + 'px',
-    		// if the auto width of the submenu items is larger then the 
-    		// top menu item then move the submenu to the right
-    		right     : $( this ).offset().right - 
-    		    (links_auto_width - $( this ).innerWidth()) + 'px',
+    		top      : item.offset().top + item.outerHeight() + 'px',
+		left     : item.offset().left,
     		zIndex   : 1000
     	    });
-    	    ketabSubmenu.stop().slideDown( 600 );
-    	    ketabSubmenu.mouseleave(function() {
-    		ketabSubmenu.slideUp( 600 );;
-    		// Remove the hovered state from the top menu
-    		ketabSubmenu.parent().
-    		    removeClass("keep-hover");
-    	    });
-	})
+    	    curSubMenu.stop().slideDown( 600 );
+	    curSubMenu.mouseenter(function() {
+		mouseOnSub = true;
+	    });
 
-	$( '#top-menu .nav-list' ).mouseleave(function() {
-	    ketabSubmenu.slideUp( 600 );;
-	    // Remove the hovered state from the top menu
-	    $( '#top-menu .menu-item-has-children' ).
-		removeClass("keep-hover");
+	    item.mouseleave(function() {
+		mouseOnItem = false;
+		if ( !mouseOnSub ) {
+		    curSubMenu.slideUp( 600 );
+    		    item.removeClass("keep-hover");
+		}
+	    });
+
+	    curSubMenu.mouseleave( function() {
+		mouseOnSub = false;
+		if ( !mouseOnItem ) {
+		    curSubMenu.slideUp( 600 );
+    		    item.removeClass("keep-hover");
+		}
+	    });
+	    
 	});
+
     }
 });
