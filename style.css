@@ -712,6 +712,7 @@ ul.social-menu {
 
 /* Desktops */
 /* @media only screen and (min-width: 768px) { */
+
 /* Tablets */
 @media only screen and (max-width: 950px) {
     #site {
@@ -882,6 +883,44 @@ ul.social-menu {
 
     #tag-line {
 	font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #header {
+	height:auto;
+	width: auto;
+    }
+    
+    #header-search {
+	display: none;
+    }
+    
+    #header-right-col, #header-left-col, #site-title, #tag-line, #social-menu-container, ul.social-menu {
+	width: auto;
+	display: block;
+	float:none;
+    }
+
+    #site-title, #tag-line {
+	margin:2% 0;
+    }
+
+    #social-menu-container {
+	margin:auto;
+	padding-left: 1%;
+    }
+
+    h1, h2, h3, h4, .post-title, #sidebar .widgettitle {
+	font-size: medium;
+    }
+
+    .post, #sidebar a {
+	font-size: small;
+    }
+
+     {
+	font-size: medium;
     }
 }
 
