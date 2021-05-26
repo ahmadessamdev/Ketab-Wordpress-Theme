@@ -10,5 +10,4 @@ Open source theme for WordPress.
 *Note*: You might need to work on it for a while if you want to use in production.
 
 #### Links:
-- [Theme Preview](http://ketab.ahmedspace.com/)
 - PSD files in the [release](https://github.com/ahmedessamdev/ketab/releases) section
