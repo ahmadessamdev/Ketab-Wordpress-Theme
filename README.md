@@ -1,5 +1,7 @@
 # Ketab Theme
 Classic theme for WordPress.
+
+
 ![screenshot](https://github.com/user-attachments/assets/699636b3-1ec5-43de-a549-ccdaee17f0e7)
 
 
